@@ -85,7 +85,6 @@ dependencies {
     implementation(libs.com.android.tools.build.apksig)
     implementation(libs.com.github.kyuubiran.ezxhelper)
     implementation(libs.dev.rikka.hidden.compat)
-    implementation(libs.lsposed.nativehook)
     compileOnly(libs.de.robv.android.xposed.api)
     compileOnly(libs.dev.rikka.hidden.stub)
 }
