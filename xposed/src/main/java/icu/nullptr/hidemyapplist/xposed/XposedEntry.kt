@@ -8,6 +8,7 @@ import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.XC_MethodHook
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 import icu.nullptr.hidemyapplist.common.Constants
+import icu.nullptr.hidemyapplist.xposed.nativehook.NativeHookLoader
 import kotlin.concurrent.thread
 
 private const val TAG = "HMA-XposedEntry"
@@ -17,6 +18,7 @@ class XposedEntry : IXposedHookZygoteInit, IXposedHookLoadPackage {
 
     override fun initZygote(startupParam: IXposedHookZygoteInit.StartupParam) {
         EzXHelperInit.initZygote(startupParam)
+        NativeHookLoader
     }
 
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
